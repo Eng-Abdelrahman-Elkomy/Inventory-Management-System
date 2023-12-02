@@ -161,4 +161,33 @@ public class Admin {
         }
         return adminArrayList;
     }
+    public static String Report(String productId){
+        Scanner s = new Scanner(System.in);
+        String report="";
+        System.out.println("if your report about A lot of product in inventory enter 1 " +
+                "\n if your report about A lest of product in inventory enter 2 ");
+        int n = s.nextInt();
+        if (n==1){
+            System.out.print("enter the Quantity of this product");
+            int k= s.nextInt();
+            report ="the Quantity of "+productId+""+k;
+
+        }
+        if (n==2){
+            System.out.print("enter the Quantity of this product");
+            int f= s.nextInt();
+            System.out.println("if you want mor of them enter 1 but if you didnt want enter 0");
+            int o= s.nextInt();
+            if (o==1){
+                System.out.println("enter your Quantity need ");
+                int l= s.nextInt();
+                report="the Quantity of"+productId+""+f+"and we need "+l+"of them ";
+            }
+            if (o==0){
+                report="the Quantity of"+productId+""+f+"and we didnt need of them ";
+            }
+        }
+        return report;
+
+    }
 }
